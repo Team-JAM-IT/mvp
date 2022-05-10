@@ -161,12 +161,11 @@
 
 		<!-- check out section -->
 		<div class="checkout-section mt-150 mb-150">
-			<!-- <h1>Request Quote</h1> -->
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 offset-lg-2 text-center">
 						<div class="section-title">
-							<h3><span class="orange-text">Request</span> Quote</h3>
+							<h3><span class="orange-text">Event</span> Details</h3>
 						</div>
 					</div>
 				</div>
@@ -198,15 +197,12 @@
 									>
 										<div class="card-body">
 											<div class="billing-address-form">
-												<form action="index.html">
+												<!-- <form action="index.html">
 													<p><input type="text" placeholder="Name" /></p>
 													<p><input type="email" placeholder="Email" /></p>
 													<p><input type="tel" placeholder="Phone" /></p>
 													<p>
 														<input type="text" placeholder="Event Location" />
-													</p>
-													<p>~
-														<input type="date" placeholder="Event Date" />
 													</p>
 													<p>
 														<input
@@ -230,12 +226,72 @@
 													>
 														Request Quote
 													</a>
-												</form>
+												</form> -->
+												<h5>
+													<span class="orange-text">Id:</span> JM038876473
+												</h5>
+												<h5>
+													<span class="orange-text">Name:</span> Mary Okwong
+												</h5>
+												<h5>
+													<span class="orange-text">Email:</span> maryo@mail.com
+												</h5>
+												<h5>
+													<span class="orange-text">Phone:</span> 07056789435
+												</h5>
+												<h5>
+													<span class="orange-text">Location:</span> 44, AKin
+													Olabode street, Victoria Island
+												</h5>
+												<h5>
+													<span class="orange-text">Date:</span> 22nd July 2022
+												</h5>
+												<h5>
+													<span class="orange-text">Number of attendees:</span>
+													50
+												</h5>
+												<h5>
+													<span class="orange-text"
+														>Special Considerations:</span
+													>
+													My brother is allergic to peanuts.
+												</h5>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div id="quote_alert"></div>
+								<div class="card single-accordion">
+									<div class="card-header" id="headingTwo">
+										<h5 class="mb-0">
+											<button
+												class="btn btn-link"
+												type=""
+												data-toggle="collapse"
+												data-target="#collapseTwo"
+												aria-expanded="false"
+												aria-controls="collapseTwo"
+											>
+												Vendor's Quote
+											</button>
+										</h5>
+									</div>
+									<div
+										id="collapseTwo"
+										class="collapse"
+										aria-labelledby="headingTwo"
+										data-parent="#accordionExample"
+									>
+										<div class="card-body">
+											<div class="shipping-address-form">
+												<p>
+													Vendor has not given a quote yet. Please check back
+													later.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -435,7 +491,7 @@
 		<script src="assets/js/sticker.js"></script>
 		<!-- main js -->
 		<script src="assets/js/main.js"></script>
-		<script>
+		<!-- <script>
 			let request = document.getElementById("request_quote");
 			let quoteBox = document.getElementById("quote_alert");
 			request.onclick = function (e) {
@@ -461,11 +517,11 @@
 													</p>
 													<hr />
 													<p class="mb-0">
-														<a href="event_details.html" class="boxed-btn">View Details</a>
+														<a href="shop.html" class="boxed-btn">View Details</a>
 													</p>
 												</div>`;
 				}, 3000);
 			};
-		</script>
+		</script> -->
 	</body>
 </html>
