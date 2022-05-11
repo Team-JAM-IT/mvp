@@ -507,6 +507,41 @@
 		</div>
 		<!-- end copyright -->
 
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="payModal"
+			tabindex="-1"
+			aria-labelledby="payModal"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-3"></div>
+							<div class="col-md-6">
+								<p></p>
+								<h2>Payment</h2>
+								<div class="d-flex justify-content-center">
+									<div
+										class="spinner-grow orange-text"
+										role="status"
+										style="width: 10rem; height: 10rem"
+									>
+										<span class="sr-only">Loading...</span>
+									</div>
+								</div>
+
+								<p>Mocking Payment gateway</p>
+							</div>
+							<div class="col-md-3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- jquery -->
 		<script src="assets/js/jquery-1.11.3.min.js"></script>
 		<!-- bootstrap -->
@@ -563,6 +598,7 @@
 			pay.onclick = function (e) {
 				e.preventDefault();
 				// request.setAttribute("disabled", "");
+				$("#payModal").modal("show");
 				pay.style.pointerEvents = "none";
 				pay.style.cursor = "default";
 				let loading = document.createElement("span");
@@ -573,6 +609,7 @@
 				pay.appendChild(loading);
 				setTimeout(function () {
 					pay.removeChild(loading);
+					$("#payModal").modal("hide");
 					quoteBox.innerHTML = `<div class="alert alert-secondary" role="alert">
 													<h4 class="alert-heading orange-text">
 														<i class="fas fa-check-circle"></i>
