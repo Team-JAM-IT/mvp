@@ -367,6 +367,14 @@ a.bordered-btn {
 	border: 2px solid #fa7153;
 	padding: 7px 20px;
 }
+a.rej-btn {
+	font-family: "Poppins", sans-serif;
+	display: inline-block;
+	background-color: #051922;
+	color: #fa7153;
+	border: none;
+	padding: 7px 20px;
+}
 a.read-more-btn {
 	display: inline-block;
 	margin-top: 15px;
@@ -1380,7 +1388,7 @@ span.comment-date {
 	border-bottom: 1px solid #aaa;
 }
 .single-comment-body.child {
-	margin-left: 75px;
+	/* margin-left: 75px; */
 }
 .comment-text-body p {
 	color: #888;

@@ -260,7 +260,6 @@
 										</div>
 									</div>
 								</div>
-								<div id="quote_alert"></div>
 								<div class="card single-accordion">
 									<div class="card-header" id="headingTwo">
 										<h5 class="mb-0">
@@ -284,63 +283,100 @@
 									>
 										<div class="card-body">
 											<div class="shipping-address-form">
-												<p>
-													Vendor has not given a quote yet. Please check back
-													later.
-												</p>
+												<div class="row">
+													<div class="col-7">
+														<div class="single-comment-body child">
+															<div class="comment-user-avater">
+																<img
+																	src="https://media.istockphoto.com/photos/bartender-at-work-in-a-bar-picture-id1004093088?k=20&m=1004093088&s=612x612&w=0&h=3VyUAo2mXS3-TKnj6R02Zly8beYWh2oX3nrHvfmWvrY="
+																	alt="Olabisi"
+																/>
+															</div>
+															<div class="comment-text-body">
+																<h4>Olabisi Olabode</h4>
+																<p class="comment-date">May 11, 2022</p>
+																<p>
+																	Hello Mary, for your event, i will be with
+																	carribean themed drinks, but will also have
+																	non alcoholic drinks.
+																</p>
+																<a href="#" class="orange-text">
+																	<b>reply</b></a
+																>
+															</div>
+														</div>
+													</div>
+													<div class="col-5">
+														<div class="order-details-wrap">
+															<table class="order-details" style="width: 100%">
+																<thead>
+																	<tr>
+																		<th>
+																			<h5>Details</h5>
+																		</th>
+																		<th>
+																			<h5>Price</h5>
+																		</th>
+																	</tr>
+																</thead>
+																<tbody class="order-details-body">
+																	<tr>
+																		<td>Red wine</td>
+																		<td>25000.00</td>
+																	</tr>
+																	<tr>
+																		<td>Soft drinks</td>
+																		<td>30000.00</td>
+																	</tr>
+																	<tr>
+																		<td>Gin & Vodka</td>
+																		<td>25000.00</td>
+																	</tr>
+																	<tr>
+																		<td>Beer</td>
+																		<td>25000.00</td>
+																	</tr>
+																	<tr>
+																		<td>Servers</td>
+																		<td>30000.00</td>
+																	</tr>
+																</tbody>
+																<tbody class="checkout-details">
+																	<tr>
+																		<td>Logistics</td>
+																		<td>15000.00</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<b>Total</b>
+																		</td>
+																		<td>
+																			<b>150000.00</b>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+
+												<div class="hero-btns">
+													<a href="shop.html" class="boxed-btn" id="pay">Pay</a>
+													<a
+														href="contact.html"
+														class="bordered-btn rej-btn"
+														id="reject"
+														>Reject</a
+													>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+								<div id="quote_alert"></div>
 							</div>
 						</div>
 					</div>
-
-					<!-- <div class="col-lg-4">
-						<div class="order-details-wrap">
-							<table class="order-details">
-								<thead>
-									<tr>
-										<th>Your order Details</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody class="order-details-body">
-									<tr>
-										<td>Product</td>
-										<td>Total</td>
-									</tr>
-									<tr>
-										<td>Strawberry</td>
-										<td>$85.00</td>
-									</tr>
-									<tr>
-										<td>Berry</td>
-										<td>$70.00</td>
-									</tr>
-									<tr>
-										<td>Lemon</td>
-										<td>$35.00</td>
-									</tr>
-								</tbody>
-								<tbody class="checkout-details">
-									<tr>
-										<td>Subtotal</td>
-										<td>$190</td>
-									</tr>
-									<tr>
-										<td>Shipping</td>
-										<td>$50</td>
-									</tr>
-									<tr>
-										<td>Total</td>
-										<td>$240</td>
-									</tr>
-								</tbody>
-							</table>
-							<a href="#" class="boxed-btn">Place Order</a>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -491,37 +527,67 @@
 		<script src="assets/js/sticker.js"></script>
 		<!-- main js -->
 		<script src="assets/js/main.js"></script>
-		<!-- <script>
-			let request = document.getElementById("request_quote");
+		<script>
 			let quoteBox = document.getElementById("quote_alert");
-			request.onclick = function (e) {
+			let pay = document.getElementById("pay");
+			let reject = document.getElementById("reject");
+			reject.onclick = function (e) {
 				e.preventDefault();
 				// request.setAttribute("disabled", "");
-				request.style.pointerEvents = "none";
-				request.style.cursor = "default";
+				reject.style.pointerEvents = "none";
+				reject.style.cursor = "default";
 				let loading = document.createElement("span");
 				loading.setAttribute("class", "spinner-border spinner-border-sm");
 				loading.setAttribute("role", "status");
 				loading.setAttribute("aria-hidden", "");
 				loading.setAttribute("style", "color: white");
-				request.appendChild(loading);
+				reject.appendChild(loading);
 				setTimeout(function () {
-					request.removeChild(loading);
+					reject.removeChild(loading);
 					quoteBox.innerHTML = `<div class="alert alert-secondary" role="alert">
 													<h4 class="alert-heading orange-text">
 														<i class="fas fa-check-circle"></i>
-														<span>Quote Requested!</span>
+														<span>Quote Rejected!</span>
 													</h4>
 													<p>
-														Expect a response from vendor within the next 24 hours.
+														Don't like this vendor? Get a new <a href="#" class="orange-text">vendor</a> or talk to <a href="mailto:support@jamit.com" class="orange-text">us</a>
 													</p>
 													<hr />
 													<p class="mb-0">
-														<a href="shop.html" class="boxed-btn">View Details</a>
+														Need support? send us an email at <a href="mailto:support@jamit.com" class="orange-text">support@jamit.com</a>
 													</p>
 												</div>`;
 				}, 3000);
 			};
-		</script> -->
+
+			pay.onclick = function (e) {
+				e.preventDefault();
+				// request.setAttribute("disabled", "");
+				pay.style.pointerEvents = "none";
+				pay.style.cursor = "default";
+				let loading = document.createElement("span");
+				loading.setAttribute("class", "spinner-border spinner-border-sm");
+				loading.setAttribute("role", "status");
+				loading.setAttribute("aria-hidden", "");
+				loading.setAttribute("style", "color: white");
+				pay.appendChild(loading);
+				setTimeout(function () {
+					pay.removeChild(loading);
+					quoteBox.innerHTML = `<div class="alert alert-secondary" role="alert">
+													<h4 class="alert-heading orange-text">
+														<i class="fas fa-check-circle"></i>
+														<span>Booking Confirmed!</span>
+													</h4>
+													<p>
+														Sit back, relax and enjoy your event!
+													</p>
+													<p>
+														Need support? send us an email at <a href="mailto:support@jamit.com" class="orange-text">support@jamit.com</a>
+														</p>
+													<hr />
+												</div>`;
+				}, 3000);
+			};
+		</script>
 	</body>
 </html>
